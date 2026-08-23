@@ -3,17 +3,37 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
   private PlayerInputController inputController;
+  [SerializeField] private SpriteRenderer spriteRenderer;
   private Rigidbody2D rb;
+  public float moveSpeed = 3f;
+  public Animator animator;
   void Awake()
   {
     inputController = GetComponent<PlayerInputController>();
     rb = GetComponent<Rigidbody2D>();
+
+  }
+  private void Update()
+  {
+    float horizontalInput = inputController.MoveInput.x;
+
+    animator.SetFloat("Speed", Mathf.Abs(horizontalInput));
+
+    if (horizontalInput > 0.01f)
+    {
+      spriteRenderer.flipX = false;
+    }
+    else if (horizontalInput < -0.01f)
+    {
+      spriteRenderer.flipX = true;
+    }
   }
   void FixedUpdate()
   {
-    if (inputController.MoveInput == new Vector2(0f, 0f)) return;
-    float test = inputController.MoveInput.normalized.x > 0 ? 1 : -1;
-    rb.linearVelocity = new Vector2(test * 3f, rb.linearVelocity.y);
+
+    float horizontalInput = inputController.MoveInput.x;
+
+    rb.linearVelocity = new Vector2(horizontalInput * moveSpeed, rb.linearVelocity.y);
   }
 
 
