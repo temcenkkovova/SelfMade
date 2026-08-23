@@ -8,7 +8,7 @@ public class PlayerJump : MonoBehaviour
   [SerializeField] private Transform groundCheck;
   [SerializeField] private float groundCheckRadius = 0.15f;
   [SerializeField] private LayerMask groundLayer;
-  [SerializeField] private float jumpForce = 3f;
+  [SerializeField] private float jumpForce = 7f;
   private Rigidbody2D rb;
 
   void Awake()

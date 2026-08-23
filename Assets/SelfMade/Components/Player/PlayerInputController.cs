@@ -36,7 +36,7 @@ public class PlayerInputController : MonoBehaviour
 
   public void OnJumpStarted(InputAction.CallbackContext context)
   {
-    Debug.Log("Ju");
+
     OnJump?.Invoke();
   }
 }
