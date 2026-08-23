@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 189632678}
   - component: {fileID: 189632677}
   - component: {fileID: 189632679}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -959,7 +959,7 @@ Transform:
   m_GameObject: {fileID: 2013329851}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.653, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -979,6 +979,7 @@ GameObject:
   - component: {fileID: 2049397380}
   - component: {fileID: 2049397379}
   - component: {fileID: 2049397378}
+  - component: {fileID: 2049397381}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1106,6 +1107,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad195523220c7a841aad397441320949, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerBootstrap
+--- !u!114 &2049397381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2049397373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 089f49b3d7dab0145a008ab150a61d59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerJump
+  animator: {fileID: 1375303502}
+  groundCheck: {fileID: 2013329852}
+  groundCheckRadius: 0.15
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  jumpForce: 3
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

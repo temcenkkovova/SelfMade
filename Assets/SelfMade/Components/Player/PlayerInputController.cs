@@ -28,10 +28,15 @@ public class PlayerInputController : MonoBehaviour
   }
   void OnDisable()
   {
-    inputActions.Player.Disable();
+
     inputActions.Player.Jump.performed -= OnJumpStarted;
+    inputActions.Player.Disable();
   }
 
 
-  public void OnJumpStarted(InputAction.CallbackContext context) => OnJump?.Invoke();
+  public void OnJumpStarted(InputAction.CallbackContext context)
+  {
+    Debug.Log("Ju");
+    OnJump?.Invoke();
+  }
 }
