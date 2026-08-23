@@ -16,6 +16,7 @@
 /[Oo]bj/
 /[Bb]uild/
 /[Bb]uilds/
+/Assets/ThirdParty/
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
 *.log
