@@ -389,8 +389,8 @@ Transform:
   m_GameObject: {fileID: 425654083}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 4.995, y: 1.59, z: 0}
-  m_LocalScale: {x: 2.525, y: 0.7648437, z: 1}
+  m_LocalPosition: {x: 4.995, y: 1.29, z: 0}
+  m_LocalScale: {x: 1.8937501, y: 0.7648437, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 402924635}
@@ -1122,7 +1122,7 @@ GameObject:
   - component: {fileID: 1359796703}
   - component: {fileID: 1359796704}
   - component: {fileID: 1359796705}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1138,7 +1138,7 @@ Transform:
   m_GameObject: {fileID: 1359796702}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.87, y: 3.18, z: 0}
+  m_LocalPosition: {x: 5.87, y: 2.64, z: 0}
   m_LocalScale: {x: 2.525, y: 0.7648437, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1361,7 +1361,7 @@ GameObject:
   - component: {fileID: 1569226068}
   - component: {fileID: 1569226069}
   - component: {fileID: 1569226070}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1377,7 +1377,7 @@ Transform:
   m_GameObject: {fileID: 1569226067}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.4, y: 2.38, z: 0}
+  m_LocalPosition: {x: 0.14, y: 2.38, z: 0}
   m_LocalScale: {x: 4.612242, y: 0.25515625, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1690,7 +1690,7 @@ GameObject:
   - component: {fileID: 2143678081}
   - component: {fileID: 2143678082}
   - component: {fileID: 2143678083}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1706,8 +1706,8 @@ Transform:
   m_GameObject: {fileID: 2143678080}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.32, y: 0.68, z: 0}
-  m_LocalScale: {x: 2.525, y: 0.7648437, z: 1}
+  m_LocalPosition: {x: 3.32, y: 0.6, z: 0}
+  m_LocalScale: {x: 2.525, y: 0.54495114, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 402924635}
