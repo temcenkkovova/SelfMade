@@ -4,48 +4,59 @@ using UnityEngine;
 
 public class DeadPopup : MonoBehaviour
 {
-  [SerializeField] private TMP_Text damageText;
-  [SerializeField] private CanvasGroup canvasGroup;
+    [SerializeField] private TMP_Text damageText;
+    [SerializeField] private CanvasGroup canvasGroup;
 
-  public void Show(string message)
-  {
+    // [SerializeField] private float lifeTime = 1.5f;
+    [SerializeField] private float fadeDuration = 0.35f;
+    [SerializeField] private float moveDistance = 1.5f;
 
-    damageText.text = message;
+    public void Show(string message, float lifeTime)
+    {
+        damageText.text = message;
 
-    transform.DOKill();
-    canvasGroup.DOKill();
+        transform.DOKill();
+        canvasGroup.DOKill();
 
-    canvasGroup.alpha = 1f;
+        canvasGroup.alpha = 1f;
+        transform.localScale = Vector3.one;
 
-    Vector3 startPosition = transform.position;
-    Vector3 endPosition = startPosition + Vector3.up * 1.5f;
+        Vector3 startPosition = transform.position;
+        Vector3 endPosition =
+            startPosition + Vector3.up * moveDistance;
 
-    Sequence sequence = DOTween.Sequence();
+        Sequence sequence = DOTween.Sequence();
 
-    sequence.Join(
-      transform
-        .DOMove(endPosition, 3f)
-        .SetEase(Ease.OutQuad)
-    );
+        // Движение продолжается всё время жизни.
+        sequence.Join(
+            transform
+                .DOMove(endPosition, lifeTime)
+                .SetEase(Ease.OutQuad)
 
-    sequence.Join(
-      canvasGroup
-        .DOFade(0f, 0.35f)
-        .SetDelay(0.15f)
-        .SetEase(Ease.InQuad)
-    );
+        );
 
-    sequence.Join(
-      transform.DOPunchScale(
-        Vector3.one * 0.15f,
-        0.5f,
-        5,
-        0.5f
-      )
-    );
+        // Короткий удар при появлении.
+        sequence.Insert(
+            0f,
+            transform.DOPunchScale(
+                Vector3.one * 0.15f,
+                0.5f,
+                5,
+                0.5f
+            )
+        );
 
-    sequence
-      .OnComplete(() => Destroy(gameObject))
-      .SetLink(gameObject);
-  }
+        // Исчезновение начинается перед окончанием жизни.
+        sequence.Insert(
+            lifeTime - fadeDuration,
+            canvasGroup
+                .DOFade(0f, fadeDuration)
+                .SetEase(Ease.InQuad)
+
+        );
+
+        sequence
+            .OnComplete(() => Destroy(gameObject))
+            .SetLink(gameObject);
+    }
 }

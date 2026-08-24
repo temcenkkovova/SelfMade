@@ -19,6 +19,7 @@ public class PlayerJump : MonoBehaviour
   }
   private void HandleJump()
   {
+
     if (!IsOnGround) return;
     rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
     animator.SetTrigger("Jump");

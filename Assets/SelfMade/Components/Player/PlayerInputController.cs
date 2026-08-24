@@ -17,6 +17,7 @@ public class PlayerInputController : MonoBehaviour
 
   void Update()
   {
+    if (LevelComponent.Instance.isCompleted) enabled = false;
     MoveInput = inputActions.Player.Move.ReadValue<Vector2>();
 
 
@@ -36,7 +37,7 @@ public class PlayerInputController : MonoBehaviour
 
   public void OnJumpStarted(InputAction.CallbackContext context)
   {
-
+    if (LevelComponent.Instance.isCompleted) return;
     OnJump?.Invoke();
   }
 }

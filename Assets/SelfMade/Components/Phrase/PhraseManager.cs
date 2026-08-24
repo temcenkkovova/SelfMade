@@ -31,6 +31,7 @@ public class PhraseManager : MonoBehaviour
 
   public void SpawnPhrase()
   {
+    if (LevelComponent.Instance.isCompleted) return;
     GameObject player =
           GameObject.FindGameObjectWithTag("Player");
     if (player == null)

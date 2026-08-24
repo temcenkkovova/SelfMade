@@ -16,6 +16,12 @@ public class PlayerMovement : MonoBehaviour
   private void Update()
   {
     float horizontalInput = inputController.MoveInput.x;
+    if (LevelComponent.Instance.isCompleted)
+    {
+      horizontalInput = 0f;
+
+    }
+
 
     animator.SetFloat("Speed", Mathf.Abs(horizontalInput));
 
@@ -30,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
   }
   void FixedUpdate()
   {
-
+    if (LevelComponent.Instance.isCompleted) return;
     float horizontalInput = inputController.MoveInput.x;
 
     rb.linearVelocity = new Vector2(horizontalInput * moveSpeed, rb.linearVelocity.y);
