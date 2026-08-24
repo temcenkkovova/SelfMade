@@ -9,12 +9,14 @@ public class PlayerJump : MonoBehaviour
   [SerializeField] private float groundCheckRadius = 0.15f;
   [SerializeField] private LayerMask groundLayer;
   [SerializeField] private float jumpForce = 7f;
+  private PlayerMovement playerMovement;
   private Rigidbody2D rb;
 
   void Awake()
   {
     playerInputController = GetComponent<PlayerInputController>();
     rb = GetComponent<Rigidbody2D>();
+    playerMovement = GetComponent<PlayerMovement>();
 
   }
   private void HandleJump()
@@ -32,6 +34,11 @@ public class PlayerJump : MonoBehaviour
         groundCheckRadius,
         groundLayer
     );
+
+    if (IsOnGround && playerMovement.currentPlatform)
+    {
+      playerMovement.ClearCurrentPlatform(playerMovement.currentPlatform);
+    }
   }
   void OnEnable()
   {

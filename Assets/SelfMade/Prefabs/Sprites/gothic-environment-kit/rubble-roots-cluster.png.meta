@@ -1,0 +1,663 @@
+fileFormatVersion: 2
+guid: 293494cdc37862a4cb0fa17e544317e1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5713427540855191760
+    second: rubble-roots-cluster_0
+  - first:
+      213: -2905581145260999725
+    second: rubble-roots-cluster_1
+  - first:
+      213: -7927197279549573723
+    second: rubble-roots-cluster_2
+  - first:
+      213: -1062604060997344317
+    second: rubble-roots-cluster_3
+  - first:
+      213: -8630315117824854383
+    second: rubble-roots-cluster_4
+  - first:
+      213: 3445988664721322435
+    second: rubble-roots-cluster_5
+  - first:
+      213: 2843780228759502922
+    second: rubble-roots-cluster_6
+  - first:
+      213: 6406290342708721019
+    second: rubble-roots-cluster_7
+  - first:
+      213: -8051551196945916834
+    second: rubble-roots-cluster_8
+  - first:
+      213: -7482101875909358289
+    second: rubble-roots-cluster_9
+  - first:
+      213: 4202502251350387717
+    second: rubble-roots-cluster_10
+  - first:
+      213: 6404249251042541362
+    second: rubble-roots-cluster_11
+  - first:
+      213: -1769032890599739022
+    second: rubble-roots-cluster_12
+  - first:
+      213: 4958622448580867844
+    second: rubble-roots-cluster_13
+  - first:
+      213: 1509664834139717632
+    second: rubble-roots-cluster_14
+  - first:
+      213: 6765600281030943891
+    second: rubble-roots-cluster_15
+  - first:
+      213: -4952585948359714137
+    second: rubble-roots-cluster_16
+  - first:
+      213: -894354536882803821
+    second: rubble-roots-cluster_17
+  - first:
+      213: -5330843232789885319
+    second: rubble-roots-cluster_18
+  - first:
+      213: -1059930508339367951
+    second: rubble-roots-cluster_19
+  - first:
+      213: 6677985369787781031
+    second: rubble-roots-cluster_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: rubble-roots-cluster_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 31
+        width: 1760
+        height: 740
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03784613ce3d5b0b0800000000000000
+      internalID: -5713427540855191760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rubble-roots-cluster_1
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 678
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3db35a2c75d4da7d0800000000000000
+      internalID: -2905581145260999725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rubble-roots-cluster_2
+      rect:
+        serializedVersion: 2
+        x: 1191
+        y: 676
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a531080310fcf190800000000000000
+      internalID: -7927197279549573723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rubble-roots-cluster_3
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 632
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c3ad578c3fd041f0800000000000000
+      internalID: -1062604060997344317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rubble-roots-cluster_4
+      rect:
+        serializedVersion: 2
+        x: 1578
+        y: 82
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 196bd5e2026fa3880800000000000000
+      internalID: -8630315117824854383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rubble-roots-cluster_5
+      rect:
+        serializedVersion: 2
+        x: 1628
+        y: 71
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c1bcb4de6c92df20800000000000000
+      internalID: 3445988664721322435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rubble-roots-cluster_6
+      rect:
+        serializedVersion: 2
+        x: 1635
+        y: 68
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a404d721d03277720800000000000000
+      internalID: 2843780228759502922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rubble-roots-cluster_7
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 51
+        width: 17
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b753b2def17b7e850800000000000000
+      internalID: 6406290342708721019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rubble-roots-cluster_8
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 65
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5cda2768d4234090800000000000000
+      internalID: -8051551196945916834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rubble-roots-cluster_9
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 59
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2d83295cfb3a2890800000000000000
+      internalID: -7482101875909358289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rubble-roots-cluster_10
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 51
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50ce4832889425a30800000000000000
+      internalID: 4202502251350387717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rubble-roots-cluster_11
+      rect:
+        serializedVersion: 2
+        x: 1451
+        y: 57
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23fb37d33c670e850800000000000000
+      internalID: 6404249251042541362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rubble-roots-cluster_12
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 49
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 271f1df65f12377e0800000000000000
+      internalID: -1769032890599739022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rubble-roots-cluster_13
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 49
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 407b0f658d090d440800000000000000
+      internalID: 4958622448580867844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rubble-roots-cluster_14
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 53
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0000cc80b2863f410800000000000000
+      internalID: 1509664834139717632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rubble-roots-cluster_15
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 48
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 394e1232c9d34ed50800000000000000
+      internalID: 6765600281030943891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rubble-roots-cluster_16
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 50
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7aa9d64e151e44bb0800000000000000
+      internalID: -4952585948359714137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rubble-roots-cluster_17
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 47
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39b67d5894d9693f0800000000000000
+      internalID: -894354536882803821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rubble-roots-cluster_18
+      rect:
+        serializedVersion: 2
+        x: 941
+        y: 50
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97e8344e25a0506b0800000000000000
+      internalID: -5330843232789885319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rubble-roots-cluster_19
+      rect:
+        serializedVersion: 2
+        x: 951
+        y: 41
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ff25d381de5a41f0800000000000000
+      internalID: -1059930508339367951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rubble-roots-cluster_20
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 47
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7afc475ff48fcac50800000000000000
+      internalID: 6677985369787781031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      rubble-roots-cluster_0: -5713427540855191760
+      rubble-roots-cluster_1: -2905581145260999725
+      rubble-roots-cluster_10: 4202502251350387717
+      rubble-roots-cluster_11: 6404249251042541362
+      rubble-roots-cluster_12: -1769032890599739022
+      rubble-roots-cluster_13: 4958622448580867844
+      rubble-roots-cluster_14: 1509664834139717632
+      rubble-roots-cluster_15: 6765600281030943891
+      rubble-roots-cluster_16: -4952585948359714137
+      rubble-roots-cluster_17: -894354536882803821
+      rubble-roots-cluster_18: -5330843232789885319
+      rubble-roots-cluster_19: -1059930508339367951
+      rubble-roots-cluster_2: -7927197279549573723
+      rubble-roots-cluster_20: 6677985369787781031
+      rubble-roots-cluster_3: -1062604060997344317
+      rubble-roots-cluster_4: -8630315117824854383
+      rubble-roots-cluster_5: 3445988664721322435
+      rubble-roots-cluster_6: 2843780228759502922
+      rubble-roots-cluster_7: 6406290342708721019
+      rubble-roots-cluster_8: -8051551196945916834
+      rubble-roots-cluster_9: -7482101875909358289
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
