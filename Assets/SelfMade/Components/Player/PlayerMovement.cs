@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
   private Rigidbody2D rb;
   public float moveSpeed = 3f;
   public Animator animator;
-  private PlatformMoving currentPlatform;
+  public PlatformMoving currentPlatform { get; private set; }
   private PlayerLiveState playerLiveState;
   void Awake()
   {
@@ -39,15 +39,16 @@ public class PlayerMovement : MonoBehaviour
   }
   void FixedUpdate()
   {
+    float platformVelocityX = 0f;
     if (LevelComponent.Instance.isCompleted) return;
     if (playerLiveState.IsDead) return;
     float horizontalInput = inputController.MoveInput.x;
-    float platformVelocityX = 0f;
+
     if (currentPlatform != null)
     {
       platformVelocityX = currentPlatform.Velocity.x;
     }
-
+    if (playerLiveState.IsDead) platformVelocityX = 0f;
     rb.linearVelocity = new Vector2(horizontalInput * moveSpeed + platformVelocityX, rb.linearVelocity.y);
   }
 

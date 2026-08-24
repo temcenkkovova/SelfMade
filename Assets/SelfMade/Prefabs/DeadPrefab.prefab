@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3580725365576892434}
   - component: {fileID: 6870700916233766160}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: CheckGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57,10 +57,10 @@ GameObject:
   - component: {fileID: 8963474227539706626}
   - component: {fileID: 6305726328651745005}
   - component: {fileID: 6220537458735221790}
-  - component: {fileID: 46037428929732237}
-  m_Layer: 3
+  - component: {fileID: -5558524273140877060}
+  m_Layer: 7
   m_Name: DeadPrefab
-  m_TagString: Untagged
+  m_TagString: Corpse
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -213,7 +213,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &46037428929732237
+--- !u!114 &-5558524273140877060
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

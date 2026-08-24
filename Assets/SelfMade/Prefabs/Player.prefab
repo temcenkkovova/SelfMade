@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2759609406990548530}
   - component: {fileID: 3439370120487662065}
   - component: {fileID: 3213876343286177486}
+  - component: {fileID: -8601468862117945347}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -160,8 +161,8 @@ MonoBehaviour:
   groundCheckRadius: 0.15
   groundLayer:
     serializedVersion: 2
-    m_Bits: 8
-  jumpForce: 8
+    m_Bits: 136
+  jumpForce: 15
 --- !u!114 &3213876343286177486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,6 +178,21 @@ MonoBehaviour:
   animator: {fileID: 3985351525474581150}
   deadPrefab: {fileID: 6453901385706634857, guid: 7d60c5da5167a0a47a77ece8611aeb4b, type: 3}
   livePrefab: {fileID: 2928494447154580394}
+--- !u!114 &-8601468862117945347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2928494447154580394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 295e3d926b075854d829eb0bb4d7e34b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerCollision
+  layerCorpse:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &3053983883953966982
 GameObject:
   m_ObjectHideFlags: 0

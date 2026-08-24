@@ -7,7 +7,8 @@ public class DeadObjectCollision : MonoBehaviour
 
   private Rigidbody2D rb;
   private bool isFreezing;
-
+  public bool isOnPlatform { get; private set; } = false;
+  public PlatformMoving currentPlatform { get; private set; }
   private void Awake()
   {
     rb = GetComponent<Rigidbody2D>();
@@ -20,6 +21,13 @@ public class DeadObjectCollision : MonoBehaviour
       return;
     }
 
+    if (collision.gameObject.tag == "Platforme")
+    {
+      if (currentPlatform != null)
+        currentPlatform = collision.gameObject.GetComponent<PlatformMoving>();
+    }
+
+
     foreach (ContactPoint2D contact in collision.contacts)
     {
 
@@ -31,6 +39,11 @@ public class DeadObjectCollision : MonoBehaviour
     }
   }
 
+  public void SetPlatformState(bool newState, PlatformMoving platform)
+  {
+    isOnPlatform = newState;
+    currentPlatform = platform;
+  }
   private IEnumerator FreezeAfterLanding()
   {
     isFreezing = true;
@@ -39,6 +52,15 @@ public class DeadObjectCollision : MonoBehaviour
 
     rb.linearVelocity = Vector2.zero;
     rb.angularVelocity = 0f;
-    rb.bodyType = RigidbodyType2D.Static;
+    isFreezing = false;
+    if (isOnPlatform)
+    {
+      rb.bodyType = RigidbodyType2D.Kinematic;
+    }
+    else
+    {
+      rb.bodyType = RigidbodyType2D.Static;
+    }
+
   }
 }

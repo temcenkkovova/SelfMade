@@ -15,6 +15,7 @@ public class PlatformMoving : MonoBehaviour
 
   private void Start()
   {
+    previousPosition = transform.position;
     Vector2 startPosition = rb.position;
     Vector2 endPosition = endPoint.position;
 

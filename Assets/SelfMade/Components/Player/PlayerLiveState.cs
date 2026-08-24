@@ -6,7 +6,7 @@ public class PlayerLiveState : MonoBehaviour
   public Animator animator;
   public bool IsDead { get; private set; } = false;
 
-
+  private PlayerMovement playerMovement;
   public GameObject deadPrefab;
   public GameObject livePrefab;
   private PlayerManager playerManager;
@@ -16,6 +16,7 @@ public class PlayerLiveState : MonoBehaviour
   void Awake()
   {
     rb = GetComponent<Rigidbody2D>();
+    playerMovement = GetComponent<PlayerMovement>();
   }
   public void Init(PlayerManager playerManager)
   {
@@ -36,9 +37,25 @@ public class PlayerLiveState : MonoBehaviour
   public IEnumerator RespawnCoroutine()
   {
     yield return new WaitForSeconds(1f);
-    Vector3 currentDeadTr = transform.position;
+
     Quaternion currentDeadRot = transform.rotation;
-    Instantiate(deadPrefab, currentDeadTr, currentDeadRot);
+    Vector3 currentDeadTr = transform.position;
+    if (playerMovement.currentPlatform != null)
+    {
+      Transform platformTr = playerMovement.currentPlatform.transform;
+      GameObject newObject = Instantiate(deadPrefab, currentDeadTr, currentDeadRot);
+      newObject.transform.SetParent(platformTr);
+
+      newObject.GetComponent<DeadObjectCollision>().SetPlatformState(true, playerMovement.currentPlatform);
+
+    }
+    else
+    {
+
+      Instantiate(deadPrefab, currentDeadTr, currentDeadRot);
+    }
+
+
     Destroy(gameObject);
     playerManager.SpawnPlayer();
 
