@@ -5,7 +5,7 @@ public class PlayerMovement : MonoBehaviour
   private PlayerInputController inputController;
   [SerializeField] private SpriteRenderer spriteRenderer;
   private Rigidbody2D rb;
-  public float moveSpeed = 3f;
+  public float moveSpeed = 5f;
   public Animator animator;
   public PlatformMoving currentPlatform { get; private set; }
   private PlayerLiveState playerLiveState;
@@ -16,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
     playerLiveState = GetComponent<PlayerLiveState>();
 
   }
+
+
   private void Update()
   {
     float horizontalInput = inputController.MoveInput.x;
@@ -47,9 +49,18 @@ public class PlayerMovement : MonoBehaviour
     if (currentPlatform != null)
     {
       platformVelocityX = currentPlatform.Velocity.x;
+      Debug.Log("Before" + platformVelocityX);
     }
-    if (playerLiveState.IsDead) platformVelocityX = 0f;
+    if (playerLiveState.IsDead)
+    {
+      platformVelocityX = 0f;
+
+    }
+
+    Debug.Log("After" + platformVelocityX);
     rb.linearVelocity = new Vector2(horizontalInput * moveSpeed + platformVelocityX, rb.linearVelocity.y);
+
+
   }
 
   public void SetCurrentPlatform(PlatformMoving platform)

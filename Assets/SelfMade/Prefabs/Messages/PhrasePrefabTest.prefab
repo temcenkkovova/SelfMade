@@ -83,7 +83,7 @@ MeshRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 6
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &2164950794959271174
@@ -115,8 +115,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -209,12 +209,12 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 22.92, y: 8.2257, z: 0}
-  m_LocalScale: {x: 2.45, y: 1.22, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 6014138143338143470}
   - {fileID: 6716973589909975659}
   - {fileID: 3342491593164928042}
-  - {fileID: 6014138143338143470}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3542307189987554988
@@ -264,14 +264,14 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 6
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_Sprite: {fileID: -3200035191929101127, guid: 38a8fdae5425d5e4abef5521d833e827, type: 3}
+  m_Color: {r: 0.6037736, g: 0.042719822, b: 0.042719822, a: 1}
+  m_FlipX: 1
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_DrawMode: 1
+  m_Size: {x: 2, y: 0.6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -290,6 +290,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoxPhrase
   textField: {fileID: 2164950794959271174}
   flyingObject: {fileID: 2037080683584680466}
+  backgroundRenderer: {fileID: 0}
+  lineRenderer: {fileID: 0}
+  appearDuration: 0.4
+  readingDuration: 1.5
+  lineDuration: 0.35
+  warningDuration: 0.55
 --- !u!1 &3979160849874220686
 GameObject:
   m_ObjectHideFlags: 0
@@ -319,13 +325,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3979160849874220686}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.559, y: -0.0124, z: 0}
-  m_LocalScale: {x: 0.1541675, y: 0.20542675, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalPosition: {x: -0.728, y: -0.001, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6934613317390385347}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!212 &8833803576972157142
 SpriteRenderer:
   serializedVersion: 2
@@ -373,14 +379,14 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 5
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  m_Sprite: {fileID: 2964955074097620818, guid: dc48f2e4cd6b88b42873277fb992badb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_DrawMode: 1
+  m_Size: {x: 0.6, y: 0.6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -398,6 +404,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FlyingObject
   moveSpeed: 20
+  spriteRenderer: {fileID: 0}
+  damageCollider: {fileID: 0}
 --- !u!114 &2047508280026195105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -445,17 +453,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.013924181, y: 0.13130635}
+  m_Offset: {x: 0.10468006, y: 0.045089245}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.28866667}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 14.04, y: 7.9}
+    newSize: {x: 0.6, y: 0.6}
     adaptiveTilingThreshold: 0.5
-    drawMode: 0
+    drawMode: 1
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.8050549, y: 0.83994603}
+  m_Size: {x: 0.28321266, y: 0.22098446}
   m_EdgeRadius: 0
 --- !u!50 &3036747870216795604
 Rigidbody2D:
@@ -493,8 +501,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 6934613317390385347}
     m_Modifications:
     - target: {fileID: 1216231718576875189, guid: 0469a25c6d3ecb74cbcf43607a8fdc87, type: 3}
-      propertyPath: m_SortingOrder
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216231718576875189, guid: 0469a25c6d3ecb74cbcf43607a8fdc87, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a01048a559d0a484c966991ccadcddc9, type: 3}
+    - target: {fileID: 1216231718576875189, guid: 0469a25c6d3ecb74cbcf43607a8fdc87, type: 3}
+      propertyPath: m_DrawMode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216231718576875189, guid: 0469a25c6d3ecb74cbcf43607a8fdc87, type: 3}
+      propertyPath: m_SortingOrder
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3886941073770565652, guid: 0469a25c6d3ecb74cbcf43607a8fdc87, type: 3}
       propertyPath: m_Name
@@ -502,19 +522,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8966794254008400424, guid: 0469a25c6d3ecb74cbcf43607a8fdc87, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.98909897
+      value: 1.1955053
       objectReference: {fileID: 0}
     - target: {fileID: 8966794254008400424, guid: 0469a25c6d3ecb74cbcf43607a8fdc87, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.0348561
+      value: 0.27745205
       objectReference: {fileID: 0}
     - target: {fileID: 8966794254008400424, guid: 0469a25c6d3ecb74cbcf43607a8fdc87, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.35807
+      value: -11.69
       objectReference: {fileID: 0}
     - target: {fileID: 8966794254008400424, guid: 0469a25c6d3ecb74cbcf43607a8fdc87, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.01
+      value: -0.03
       objectReference: {fileID: 0}
     - target: {fileID: 8966794254008400424, guid: 0469a25c6d3ecb74cbcf43607a8fdc87, type: 3}
       propertyPath: m_LocalPosition.z

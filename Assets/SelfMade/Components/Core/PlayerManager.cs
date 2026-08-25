@@ -14,6 +14,7 @@ public class PlayerManager : MonoBehaviour
   public void SpawnPlayer()
   {
     PlayerBootstrap player = Instantiate(playerPrefab, respawnPos.position, respawnPos.rotation);
+    Debug.Log(player.transform.position);
     player.GetComponent<PlayerLiveState>().Init(this);
 
   }

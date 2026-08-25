@@ -24,6 +24,7 @@ public class PlayerLiveState : MonoBehaviour
   }
   public void HandleBladeCollision()
   {
+
     if (LevelComponent.Instance.isCompleted) return;
     if (IsDead) return;
     IsDead = true;

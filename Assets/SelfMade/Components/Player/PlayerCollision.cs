@@ -13,7 +13,7 @@ public class PlayerCollision : MonoBehaviour
   private void OnCollisionEnter2D(Collision2D collision)
   {
 
-
+    Debug.Log(collision.gameObject.tag);
 
     if (collision.gameObject.tag == "Corpse")
     {
@@ -31,11 +31,14 @@ public class PlayerCollision : MonoBehaviour
       PlatformMoving platformMoving = collision.gameObject.GetComponent<PlatformMoving>();
       playerMovement.SetCurrentPlatform(platformMoving);
       currentPlatform = platformMoving;
+      Debug.Log(currentPlatform);
 
     }
     if (collision.gameObject.tag == "Ground")
     {
+      if (currentPlatform == null) return;
       playerMovement.ClearCurrentPlatform(currentPlatform);
+
     }
 
 

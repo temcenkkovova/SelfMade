@@ -34,7 +34,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5477436522998941919}
@@ -58,7 +58,7 @@ CapsuleCollider2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_LayerOverridePriority: 0
+  m_LayerOverridePriority: 5
   m_ForceSendLayers:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   spriteRenderer: {fileID: 6999413547201789948}
-  moveSpeed: 5
+  moveSpeed: 4
   animator: {fileID: 3985351525474581150}
 --- !u!114 &2759609406990548530
 MonoBehaviour:
@@ -162,7 +162,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 136
-  jumpForce: 15
+  jumpForce: 8
 --- !u!114 &3213876343286177486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,7 +192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerCollision
   layerCorpse:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 136
 --- !u!1 &3053983883953966982
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,7 +304,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_MaskInteraction: 0
   m_Sprite: {fileID: 8793639957104055765, guid: 6c41f6f0d0199014b833bae1654eb3fa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

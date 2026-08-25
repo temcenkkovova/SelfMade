@@ -25,6 +25,8 @@ public class PhraseCollision : MonoBehaviour
       playerLiveState.HandleBladeCollision();
       OnReachedTarget?.Invoke();
       canDamage = false;
+
+      Destroy(gameObject);
     }
   }
 }

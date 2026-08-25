@@ -35,10 +35,7 @@ public class PlayerJump : MonoBehaviour
         groundLayer
     );
 
-    if (IsOnGround && playerMovement.currentPlatform)
-    {
-      playerMovement.ClearCurrentPlatform(playerMovement.currentPlatform);
-    }
+
   }
   void OnEnable()
   {
