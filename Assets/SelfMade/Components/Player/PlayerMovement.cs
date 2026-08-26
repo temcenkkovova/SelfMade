@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -9,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
   public Animator animator;
   public PlatformMoving currentPlatform { get; private set; }
   private PlayerLiveState playerLiveState;
+
+
   void Awake()
   {
     inputController = GetComponent<PlayerInputController>();
@@ -38,6 +41,9 @@ public class PlayerMovement : MonoBehaviour
     {
       spriteRenderer.flipX = true;
     }
+
+
+
   }
   void FixedUpdate()
   {
@@ -49,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
     if (currentPlatform != null)
     {
       platformVelocityX = currentPlatform.Velocity.x;
-      Debug.Log("Before" + platformVelocityX);
+
     }
     if (playerLiveState.IsDead)
     {
@@ -57,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    Debug.Log("After" + platformVelocityX);
+
     rb.linearVelocity = new Vector2(horizontalInput * moveSpeed + platformVelocityX, rb.linearVelocity.y);
 
 

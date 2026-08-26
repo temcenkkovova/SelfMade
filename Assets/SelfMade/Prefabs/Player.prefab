@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 3439370120487662065}
   - component: {fileID: 3213876343286177486}
   - component: {fileID: -8601468862117945347}
+  - component: {fileID: 2028559367744948473}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -194,6 +195,24 @@ MonoBehaviour:
   layerCorpse:
     serializedVersion: 2
     m_Bits: 136
+--- !u!114 &2028559367744948473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2928494447154580394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bfce618b39f54944973b41de3672e3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAudio
+  jumpSound: {fileID: 8300000, guid: bacce7bbc150827479a2d7b220dd08d0, type: 3}
+  punchedClip: {fileID: 8300000, guid: 1c1a9a76b0fd09b4983d7b66d55ac661, type: 3}
+  reviveClip: {fileID: 8300000, guid: 175ef147497dac54f9372dae0d2a3235, type: 3}
+  volume: 0.7
+  pitchMin: 0.8
+  pitchMax: 0.95
 --- !u!1 &3053983883953966982
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,6 +255,7 @@ GameObject:
   - component: {fileID: 5477436522998941919}
   - component: {fileID: 6999413547201789948}
   - component: {fileID: 3985351525474581150}
+  - component: {fileID: 718887111940902455}
   m_Layer: 6
   m_Name: Visual
   m_TagString: Untagged
@@ -339,3 +359,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &718887111940902455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6201982475437433081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9c589e951894154abe9d6b6a69d3823, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerVisualSound
+  volume: 0.7
+  pitchMin: 0.8
+  pitchMax: 0.95
+  walkSound: {fileID: 8300000, guid: b65f283d432b6574c91533df1341dae2, type: 3}

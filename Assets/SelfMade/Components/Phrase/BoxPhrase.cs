@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
@@ -15,7 +17,7 @@ public class BoxPhrase : MonoBehaviour
   [SerializeField] private float readingDuration = 1.5f;
   [SerializeField] private float lineDuration = 0.35f;
   [SerializeField] private float warningDuration = 0.55f;
-
+  public event Action OnStartFly;
   private PhraseCollision phraseCollision;
   private Vector3 targetPosition;
   private Vector3 initialScale;
@@ -64,6 +66,7 @@ public class BoxPhrase : MonoBehaviour
 
   private void PlayAttackSequence()
   {
+
     Color textColor = textField.color;
     Color backgroundColor = backgroundRenderer.color;
 
@@ -95,10 +98,15 @@ public class BoxPhrase : MonoBehaviour
     }
 
     animationSequence.AppendInterval(warningDuration);
+    StartCoroutine(test(warningDuration));
     animationSequence.Append(transform.DOPunchPosition(Vector3.right * 0.12f, 0.22f, 7, 0.5f));
     animationSequence.AppendCallback(() => flyingObject.Launch(targetPosition));
   }
-
+  private IEnumerator test(float delay)
+  {
+    yield return new WaitForSeconds(delay + 2.3f);
+    OnStartFly?.Invoke();
+  }
   public void HandleDestroy()
   {
     if (destroyRequested) return;

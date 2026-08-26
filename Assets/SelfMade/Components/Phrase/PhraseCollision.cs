@@ -26,6 +26,8 @@ public class PhraseCollision : MonoBehaviour
     {
       if (!canDamage) return;
       PlayerLiveState playerLiveState = collision.GetComponent<PlayerLiveState>();
+      PlayerAudio playerAudio = collision.GetComponent<PlayerAudio>();
+      playerAudio.PlayPunchedSound();
       popupPosition = collision.transform.position;
       DeadPopup popup = Instantiate(deadPopupPrefab, popupPosition, Camera.main.transform.rotation);
       popup.Show(deadMessage, 3f);

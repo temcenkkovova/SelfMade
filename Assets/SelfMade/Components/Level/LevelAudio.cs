@@ -4,8 +4,9 @@ public class LevelAudio : MonoBehaviour
 {
   public AudioClip levelBackgroundAudio;
   public AudioClip levelFinishAudio;
-  public float pitchMin = 1f;
-  public float pitchMax = 1.5f;
+  public float pitchMin = 0.75f;
+  public float pitchMax = 0.95f;
+  public float volume = 0.76f;
 
   public float volumeFinishAudio;
   private LevelGoal levelGoal;
@@ -18,7 +19,7 @@ public class LevelAudio : MonoBehaviour
   void Start()
   {
     float pitch = Random.Range(pitchMin, pitchMax);
-    AudioService.Instance.PlayAt(new Vector3(0, 0, 0), levelBackgroundAudio, 0.5f, pitch, true);
+    AudioService.Instance.PlayAt(new Vector3(0, 0, 0), levelBackgroundAudio, volume, pitch, true);
   }
 
   void OnDisable()
@@ -29,6 +30,6 @@ public class LevelAudio : MonoBehaviour
   private void PlayFinishSound()
   {
     float pitch = Random.Range(pitchMin, pitchMax);
-    AudioService.Instance.PlayAt(new Vector3(0, 0, 0), levelFinishAudio, 0.5f, pitch, false);
+    AudioService.Instance.PlayAt(new Vector3(0, 0, 0), levelFinishAudio, volumeFinishAudio, pitch, false);
   }
 }

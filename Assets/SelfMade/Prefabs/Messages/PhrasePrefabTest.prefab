@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6934613317390385347}
   - component: {fileID: 3542307189987554988}
   - component: {fileID: 7011888402311624593}
+  - component: {fileID: 9202288908745631501}
   m_Layer: 0
   m_Name: PhrasePrefabTest
   m_TagString: Untagged
@@ -115,6 +116,22 @@ MonoBehaviour:
   readingDuration: 1.5
   lineDuration: 0.35
   warningDuration: 0.55
+--- !u!114 &9202288908745631501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878215899207653879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62c83d0756821b54895a73d2e43832bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlyingObjectSound
+  audioClip: {fileID: 8300000, guid: 29418830145e9ac43bfeb203735a1631, type: 3}
+  volume: 1
+  pitchMin: 0.8
+  pitchMax: 0.95
 --- !u!1 &3979160849874220686
 GameObject:
   m_ObjectHideFlags: 0

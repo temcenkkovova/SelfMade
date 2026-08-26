@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -11,6 +12,7 @@ public class PhraseManager : MonoBehaviour
 
   [SerializeField] private float firstSpawnDelay = 2f;
   [SerializeField] private float flyingCooldown = 10f;
+  public event Action<Vector3> OnSpawnPhrase;
 
   public Phrases phrasesConfig;
 
@@ -48,7 +50,7 @@ public class PhraseManager : MonoBehaviour
     Vector3 targetPosition = new Vector3(finishPosition.position.x, capturedPlayerY, 0f);
 
     BoxPhrase boxPhrase = Instantiate(boxPhrasePrefab, spawnPosition, Quaternion.identity);
-
+    OnSpawnPhrase?.Invoke(boxPhrase.transform.position);
 
     boxPhrase.Init(GetCurrentPhrase(), GetCurrentDeadPhrase(), targetPosition);
     ChangePhraseIndex();

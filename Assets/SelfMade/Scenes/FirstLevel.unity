@@ -2560,6 +2560,7 @@ GameObject:
   - component: {fileID: 306353187}
   - component: {fileID: 306353186}
   - component: {fileID: 306353188}
+  - component: {fileID: 306353189}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -2618,6 +2619,22 @@ MonoBehaviour:
   firstSpawnDelay: 8
   flyingCooldown: 12
   phrasesConfig: {fileID: 11400000, guid: 5bea4d7b192ee234ca151758890e7620, type: 2}
+--- !u!114 &306353189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306353185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0f42261f2057ec4287baf65c1f37952, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PhraseAudio
+  audioClip: {fileID: 8300000, guid: 175ef147497dac54f9372dae0d2a3235, type: 3}
+  volume: 1
+  pitchMin: 0.8
+  pitchMax: 0.95
 --- !u!1001 &313561942
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12226,7 +12243,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: dc9d3b64c0ec8ee4fb8fdb25ab6ca0f3, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.388
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -13616,9 +13633,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LevelAudio
   levelBackgroundAudio: {fileID: 8300000, guid: 35471c352382fb642bd1808b23a5fac6, type: 3}
   levelFinishAudio: {fileID: 8300000, guid: 580143490c0f65541b4cb073fbda42f9, type: 3}
-  pitchMin: 1
-  pitchMax: 1.5
-  volumeFinishAudio: 0.8
+  pitchMin: 0.75
+  pitchMax: 0.96
+  volume: 0.76
+  volumeFinishAudio: 0.6
 --- !u!1001 &1549699372
 PrefabInstance:
   m_ObjectHideFlags: 0

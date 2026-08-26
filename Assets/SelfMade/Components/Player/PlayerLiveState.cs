@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -12,7 +13,8 @@ public class PlayerLiveState : MonoBehaviour
   private PlayerManager playerManager;
   private Rigidbody2D rb;
   public ParticleSystem bloodSystem;
-
+  public event Action OnPunched;
+  public event Action OnRevive;
 
   void Awake()
   {
@@ -29,6 +31,7 @@ public class PlayerLiveState : MonoBehaviour
     if (LevelComponent.Instance.isCompleted) return;
     if (IsDead) return;
     IsDead = true;
+    OnPunched?.Invoke();
     animator.SetTrigger("Dead");
     Instantiate(bloodSystem, transform);
     StartCoroutine(RespawnCoroutine());
@@ -58,8 +61,9 @@ public class PlayerLiveState : MonoBehaviour
     }
 
 
-    Destroy(gameObject);
-    playerManager.SpawnPlayer();
 
+    playerManager.SpawnPlayer();
+    OnRevive?.Invoke();
+    Destroy(gameObject);
   }
 }

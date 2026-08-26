@@ -14,6 +14,7 @@ public class FlyingObject : MonoBehaviour
   private Vector3 initialScale;
   private Tween movementTween;
   private bool finished;
+  //public event Action OnStartFly;
 
   private void Awake()
   {
@@ -31,6 +32,7 @@ public class FlyingObject : MonoBehaviour
 
   public void Prepare()
   {
+
     finished = false;
     damageCollider.enabled = false;
     spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, 0f);
@@ -40,7 +42,7 @@ public class FlyingObject : MonoBehaviour
   public void Launch(Vector3 targetPosition)
   {
     damageCollider.enabled = true;
-
+    //OnStartFly?.Invoke();
     Sequence launchSequence = DOTween.Sequence().SetLink(gameObject);
     launchSequence.Append(spriteRenderer.DOFade(1f, 0.08f));
     launchSequence.Join(transform.DOScale(initialScale * 1.2f, 0.1f).SetEase(Ease.OutBack));
@@ -57,6 +59,7 @@ public class FlyingObject : MonoBehaviour
       .SetEase(Ease.InQuad)
       .SetLink(gameObject)
       .OnComplete(FinishMovement);
+
   }
 
   private void FinishMovement()

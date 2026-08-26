@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PlayerJump : MonoBehaviour
@@ -10,6 +11,7 @@ public class PlayerJump : MonoBehaviour
   [SerializeField] private LayerMask groundLayer;
   [SerializeField] private float jumpForce = 7f;
   private PlayerMovement playerMovement;
+  public event Action OnJump;
   private Rigidbody2D rb;
 
   void Awake()
@@ -24,6 +26,7 @@ public class PlayerJump : MonoBehaviour
 
     if (!IsOnGround) return;
     rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+    OnJump?.Invoke();
     animator.SetTrigger("Jump");
 
   }
