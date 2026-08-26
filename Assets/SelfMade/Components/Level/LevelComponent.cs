@@ -17,6 +17,7 @@ public class LevelComponent : MonoBehaviour
   public event Action OnCompleted;
   public static LevelComponent Instance;
 
+
   void Awake()
   {
     isCompleted = false;
