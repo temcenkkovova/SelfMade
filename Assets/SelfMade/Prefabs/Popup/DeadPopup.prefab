@@ -48,6 +48,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DeadPopup
   damageText: {fileID: 2594117029405054534}
   canvasGroup: {fileID: 6198350996235785777}
+  fadeDuration: 0.35
+  moveDistance: 1.5
 --- !u!225 &6198350996235785777
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -257,7 +259,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!114 &775546285801398221
 MonoBehaviour:

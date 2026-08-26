@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b24d8aca18bfa5e498469209dad926f7, type: 3}
+  m_Name: Level-1
+  m_EditorClassIdentifier: Assembly-CSharp::Phrases
+  levelBoxPhrases:
+  - Trust me.
+  - "I won\u2019t abandon you."
+  - "I\u2019ll help you get out."
+  - Follow me.
+  - "You\u2019re safe with me"
+  - I know the right way.
+  - Just do as I say.
+  - "I\u2019m on your side."
+  - Trust me one last time.
+  - "I\u2019m not like the others."
+  - "I won\u2019t lie this time."
+  - You can rely on me.
+  - "I only want what\u2019s best for you."
+  - "One more step and you\u2019ll be free."
+  - "We\u2019ll walk this path together."
+  levelDeadPhrases:
+  - What were you hoping for?
+  - You actually believed that?
+  - Now get out on your own.
+  - Where will you go without me?
+  - Did you really think you were safe here?
+  - There is no right way for you
+  - "It\u2019s so convenient when you obey."
+  - No one has ever been on your side.
+  - "It\u2019s always the last time with you."
+  - "That\u2019s what we all told you."
+  - And you believed me again
+  - Too bad I never planned to catch you
+  - Just not better than what I have
+  - "You\u2019ve only become another corpse."
+  - Thanks for walking your part.
+  levelGoalPhrase: "You made it\u2026 without trusting anyone. Was it worth it?"

@@ -42,11 +42,12 @@ public class BoxPhrase : MonoBehaviour
     phraseCollision.OnReachedTarget += HandleDestroy;
   }
 
-  public void Init(string message, Vector3 targetPosition)
+  public void Init(string message, string deadMessage, Vector3 targetPosition)
   {
     textField.text = message;
     this.targetPosition = targetPosition;
     initialized = true;
+    phraseCollision.InitConfig(deadMessage);
   }
 
   private void Start()

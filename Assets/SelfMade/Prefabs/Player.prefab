@@ -176,8 +176,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerLiveState
   animator: {fileID: 3985351525474581150}
-  deadPrefab: {fileID: 6453901385706634857, guid: 7d60c5da5167a0a47a77ece8611aeb4b, type: 3}
+  deadPrefab: {fileID: 6453901385706634857, guid: 5ca464d82f317e8499ba7cca22029c76, type: 3}
   livePrefab: {fileID: 2928494447154580394}
+  bloodSystem: {fileID: 6429665511637202462, guid: 191097b932c51054baa1d2573ff5d8dc, type: 3}
 --- !u!114 &-8601468862117945347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -235,7 +236,7 @@ GameObject:
   - component: {fileID: 5477436522998941919}
   - component: {fileID: 6999413547201789948}
   - component: {fileID: 3985351525474581150}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}

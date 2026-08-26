@@ -11,6 +11,7 @@ public class PlayerLiveState : MonoBehaviour
   public GameObject livePrefab;
   private PlayerManager playerManager;
   private Rigidbody2D rb;
+  public ParticleSystem bloodSystem;
 
 
   void Awake()
@@ -29,7 +30,7 @@ public class PlayerLiveState : MonoBehaviour
     if (IsDead) return;
     IsDead = true;
     animator.SetTrigger("Dead");
-
+    Instantiate(bloodSystem, transform);
     StartCoroutine(RespawnCoroutine());
 
 

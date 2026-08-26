@@ -31,7 +31,7 @@ public class PlayerCollision : MonoBehaviour
       PlatformMoving platformMoving = collision.gameObject.GetComponent<PlatformMoving>();
       playerMovement.SetCurrentPlatform(platformMoving);
       currentPlatform = platformMoving;
-      Debug.Log(currentPlatform);
+
 
     }
     if (collision.gameObject.tag == "Ground")
