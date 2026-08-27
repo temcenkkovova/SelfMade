@@ -1,0 +1,481 @@
+fileFormatVersion: 2
+guid: 7001ad8c777be1141993f4541dcc09bd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2439337546438160708
+    second: 08-balcony-railing_0
+  - first:
+      213: 3443094149502600344
+    second: 08-balcony-railing_1
+  - first:
+      213: 191997313843806468
+    second: 08-balcony-railing_2
+  - first:
+      213: 6738187089280763207
+    second: 08-balcony-railing_3
+  - first:
+      213: 3527519884035749778
+    second: 08-balcony-railing_4
+  - first:
+      213: 2272553278900948401
+    second: 08-balcony-railing_5
+  - first:
+      213: 6060071316734557880
+    second: 08-balcony-railing_6
+  - first:
+      213: -4349360395494426055
+    second: 08-balcony-railing_7
+  - first:
+      213: 3725038961862481752
+    second: 08-balcony-railing_8
+  - first:
+      213: -5743433353973779117
+    second: 08-balcony-railing_9
+  - first:
+      213: -127181075889739687
+    second: 08-balcony-railing_10
+  - first:
+      213: -2544027511104582294
+    second: 08-balcony-railing_11
+  - first:
+      213: 1177526195937355361
+    second: 08-balcony-railing_12
+  - first:
+      213: 4303418287705960929
+    second: 08-balcony-railing_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 08-balcony-railing_0
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 15
+        width: 2081
+        height: 713
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbec749fc6bb52ed0800000000000000
+      internalID: -2439337546438160708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 08-balcony-railing_1
+      rect:
+        serializedVersion: 2
+        x: 1739
+        y: 717
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 894045df2e358cf20800000000000000
+      internalID: 3443094149502600344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 08-balcony-railing_2
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 717
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4014d792a8c1aa200800000000000000
+      internalID: 191997313843806468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 08-balcony-railing_3
+      rect:
+        serializedVersion: 2
+        x: 1755
+        y: 708
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74504be0579d28d50800000000000000
+      internalID: 6738187089280763207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 08-balcony-railing_4
+      rect:
+        serializedVersion: 2
+        x: 1768
+        y: 713
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 297f31a15a444f030800000000000000
+      internalID: 3527519884035749778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 08-balcony-railing_5
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 704
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bd4a0aaa2bb98f10800000000000000
+      internalID: 2272553278900948401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 08-balcony-railing_6
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 697
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8be3f7341c2b91450800000000000000
+      internalID: 6060071316734557880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 08-balcony-railing_7
+      rect:
+        serializedVersion: 2
+        x: 1767
+        y: 705
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93af662a3c7f3a3c0800000000000000
+      internalID: -4349360395494426055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 08-balcony-railing_8
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 18
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8579d40233ff1b330800000000000000
+      internalID: 3725038961862481752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 08-balcony-railing_9
+      rect:
+        serializedVersion: 2
+        x: 1278
+        y: 17
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35533496bc93b40b0800000000000000
+      internalID: -5743433353973779117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 08-balcony-railing_10
+      rect:
+        serializedVersion: 2
+        x: 1321
+        y: 15
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 958a07d3c792c3ef0800000000000000
+      internalID: -127181075889739687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 08-balcony-railing_11
+      rect:
+        serializedVersion: 2
+        x: 1649
+        y: 15
+        width: 27
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6d4acd157cc1bcd0800000000000000
+      internalID: -2544027511104582294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 08-balcony-railing_12
+      rect:
+        serializedVersion: 2
+        x: 1757
+        y: 21
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 166209e16d9675010800000000000000
+      internalID: 1177526195937355361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 08-balcony-railing_13
+      rect:
+        serializedVersion: 2
+        x: 1762
+        y: 21
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e132a6d120d8bb30800000000000000
+      internalID: 4303418287705960929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      08-balcony-railing_0: -2439337546438160708
+      08-balcony-railing_1: 3443094149502600344
+      08-balcony-railing_10: -127181075889739687
+      08-balcony-railing_11: -2544027511104582294
+      08-balcony-railing_12: 1177526195937355361
+      08-balcony-railing_13: 4303418287705960929
+      08-balcony-railing_2: 191997313843806468
+      08-balcony-railing_3: 6738187089280763207
+      08-balcony-railing_4: 3527519884035749778
+      08-balcony-railing_5: 2272553278900948401
+      08-balcony-railing_6: 6060071316734557880
+      08-balcony-railing_7: -4349360395494426055
+      08-balcony-railing_8: 3725038961862481752
+      08-balcony-railing_9: -5743433353973779117
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
