@@ -14,7 +14,7 @@ public class PlayerLiveState : MonoBehaviour
   private Rigidbody2D rb;
   public ParticleSystem bloodSystem;
   public event Action OnPunched;
-  public event Action OnRevive;
+  public event Action<Vector3> OnRevive;
 
   void Awake()
   {
@@ -63,7 +63,7 @@ public class PlayerLiveState : MonoBehaviour
 
 
     playerManager.SpawnPlayer();
-    OnRevive?.Invoke();
+    OnRevive?.Invoke(playerManager.respawnPos.position);
     Destroy(gameObject);
   }
 }

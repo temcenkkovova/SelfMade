@@ -2631,7 +2631,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0f42261f2057ec4287baf65c1f37952, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PhraseAudio
-  audioClip: {fileID: 8300000, guid: 175ef147497dac54f9372dae0d2a3235, type: 3}
+  audioClip: {fileID: 8300000, guid: 2b09785c8f6d37244ba4e3ccbb0d478f, type: 3}
   volume: 1
   pitchMin: 0.8
   pitchMax: 0.95

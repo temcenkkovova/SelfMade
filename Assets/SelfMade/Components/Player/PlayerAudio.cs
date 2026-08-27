@@ -36,10 +36,10 @@ public class PlayerAudio : MonoBehaviour
     float pitch = Random.Range(pitchMin, pitchMax);
     AudioService.Instance.PlayAt(transform.position, punchedClip, 0.5f, pitch, false);
   }
-  private void PlayReviveSound()
+  private void PlayReviveSound(Vector3 spawnPos)
   {
     float pitch = Random.Range(pitchMin, pitchMax);
-    AudioService.Instance.PlayAt(transform.position, reviveClip, 0.5f, pitch, false);
+    AudioService.Instance.PlayAt(spawnPos, reviveClip, 0.5f, pitch, false);
   }
   void OnDestroy()
   {
