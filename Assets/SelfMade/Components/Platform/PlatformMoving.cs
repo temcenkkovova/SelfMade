@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlatformMoving : MonoBehaviour
 {
   [SerializeField] private Rigidbody2D rb;
+
   [SerializeField] private Transform endPoint;
 
   [SerializeField] private float moveDuration = 4f;
@@ -14,6 +15,7 @@ public class PlatformMoving : MonoBehaviour
   private Sequence movementSequence;
   public bool IsActivatedPlatform = false;
   private Vector2 startPosition;
+  public Vector2 RBVelocity => Velocity;
 
   private bool isPlatformMoving = false;
   public event Action OnStartPos;
@@ -27,7 +29,7 @@ public class PlatformMoving : MonoBehaviour
   {
     if (IsActivatedPlatform)
     {
-      Debug.Log("Activated");
+
       return;
     }
     movementSequence?.Kill();
@@ -57,7 +59,7 @@ public class PlatformMoving : MonoBehaviour
   {
     if (!IsActivatedPlatform)
     {
-      Debug.Log("Deactivate");
+
       return;
     }
     movementSequence?.Kill();

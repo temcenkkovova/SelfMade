@@ -39,6 +39,15 @@ public class PlayerLiveState : MonoBehaviour
 
   }
 
+  public void PlayerDead()
+  {
+    if (IsDead) return;
+
+    IsDead = true;
+    animator.SetTrigger("Dead");
+    StartCoroutine(RespawnCoroutine());
+  }
+
   public IEnumerator RespawnCoroutine()
   {
     yield return new WaitForSeconds(1f);

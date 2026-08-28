@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b24d8aca18bfa5e498469209dad926f7, type: 3}
+  m_Name: Level-2
+  m_EditorClassIdentifier: Assembly-CSharp::Phrases
+  levelBoxPhrases:
+  - Follow the instructions.
+  - Your future awaits.
+  - Think for yourself.
+  - Take a seat.
+  - Reach for greatness.
+  - Learn from mistakes.
+  - Education opens doors.
+  - Trust the system.
+  - Safety comes first.
+  - One final exam.
+  - Graduation this way.
+  - Earn your degree.
+  levelDeadPhrases:
+  - Obedience is fatal.
+  - Not forble
+  - Too much thinking.
+  - Rest in pieces.
+  - You reached spikes.
+  - Make another one.
+  - Especially trapdoors
+  - System working perfectly
+  - Students come second.
+  - One final breath.
+  - Funeral that way.
+  - "\u201CPosthumously, of course."
+  levelGoalPhrase: YOU EARNED IT. WORTH EVERY DEATH?
