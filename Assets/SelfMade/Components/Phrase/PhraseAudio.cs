@@ -17,7 +17,7 @@ public class PhraseAudio : MonoBehaviour
 
   private void PlayPhaseSound(Vector3 spawnPos)
   {
-    Debug.Log("Play a");
+
     float pitch = Random.Range(pitchMin, pitchMax);
     AudioService.Instance.PlayAt(new Vector3(0, 0, 0), audioClip, volume, pitch, false);
   }

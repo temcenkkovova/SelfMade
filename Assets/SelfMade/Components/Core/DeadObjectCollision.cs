@@ -23,7 +23,7 @@ public class DeadObjectCollision : MonoBehaviour
 
     if (collision.gameObject.tag == "Platform")
     {
-      if (currentPlatform != null)
+      if (currentPlatform == null) // тут сменил с != null
         currentPlatform = collision.gameObject.GetComponent<PlatformMoving>();
     }
 

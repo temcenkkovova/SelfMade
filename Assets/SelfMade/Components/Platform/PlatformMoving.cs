@@ -1,3 +1,4 @@
+using System;
 using DG.Tweening;
 using UnityEngine;
 
@@ -14,31 +15,58 @@ public class PlatformMoving : MonoBehaviour
   public bool IsActivatedPlatform = false;
   private Vector2 startPosition;
 
-  private bool IsOnStartPos = true;
+  private bool isPlatformMoving = false;
+  public event Action OnStartPos;
 
   private void Start()
   {
     startPosition = rb.position;
     previousPosition = rb.position;
   }
-
-  public void DeactivatedPlatform()
+  public void StartPlatformMoving()
   {
-    if (!IsActivatedPlatform)
+    if (IsActivatedPlatform)
+    {
+      Debug.Log("Activated");
       return;
-    if (!IsOnStartPos) return;
-    IsActivatedPlatform = false;
-
-    // Останавливаем бесконечное движение.
+    }
     movementSequence?.Kill();
     movementSequence = null;
 
-    // Создаём отдельную анимацию возвращения.
+    Vector2 endPosition = endPoint.position;
+    IsActivatedPlatform = true;
     movementSequence = DOTween.Sequence();
 
     movementSequence
         .Append(
+            rb.DOMove(endPosition, moveDuration)
+                .SetEase(Ease.Linear)
+        )
+        .AppendInterval(waitDuration)
+        .Append(
             rb.DOMove(startPosition, moveDuration)
+                .SetEase(Ease.Linear)
+        )
+        .AppendInterval(waitDuration)
+        .SetLoops(-1, LoopType.Restart)
+        .SetUpdate(UpdateType.Fixed)
+        .SetLink(gameObject);
+  }
+
+  public void DeactivatedPlatform()
+  {
+    if (!IsActivatedPlatform)
+    {
+      Debug.Log("Deactivate");
+      return;
+    }
+    movementSequence?.Kill();
+    movementSequence = null;
+    movementSequence = DOTween.Sequence();
+
+    movementSequence
+        .Append(
+            rb.DOMove(startPosition, GetReturnDuration())
                 .SetEase(Ease.Linear)
         )
         .SetUpdate(UpdateType.Fixed)
@@ -60,40 +88,12 @@ public class PlatformMoving : MonoBehaviour
     // даже если остановилась посередине маршрута.
     return moveDuration * (remainingDistance / fullDistance);
   }
-  public void StartPlatformMoving()
-  {
-    if (IsActivatedPlatform)
-      return;
-
-    if (!IsOnStartPos) return;
-    IsOnStartPos = false;
-    movementSequence?.Kill();
-    movementSequence = null;
-
-    Vector2 endPosition = endPoint.position;
-
-    movementSequence = DOTween.Sequence();
-
-    movementSequence
-        .Append(
-            rb.DOMove(endPosition, moveDuration)
-                .SetEase(Ease.Linear)
-        )
-        .AppendInterval(waitDuration)
-        .Append(
-            rb.DOMove(startPosition, moveDuration)
-                .SetEase(Ease.Linear)
-        )
-        .AppendInterval(waitDuration)
-        .SetLoops(-1, LoopType.Restart)
-        .SetUpdate(UpdateType.Fixed)
-        .OnComplete(() => HandleStartPos())
-        .SetLink(gameObject);
-  }
 
   private void HandleStartPos()
   {
-    IsOnStartPos = true;
+    IsActivatedPlatform = false;
+    // IsOnStartPos = true;
+    OnStartPos?.Invoke();
   }
   private void FixedUpdate()
   {

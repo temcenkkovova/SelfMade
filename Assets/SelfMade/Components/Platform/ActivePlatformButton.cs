@@ -6,8 +6,9 @@ public class ActivePlatformButton : MonoBehaviour
 
   public PlatformMoving platformMoving;
 
-  private bool activated = false;
+
   private readonly HashSet<Collider2D> objectsOnButton = new();
+  private bool isCorpse = false;
 
   void OnTriggerEnter2D(Collider2D collision)
   {
@@ -15,6 +16,10 @@ public class ActivePlatformButton : MonoBehaviour
       return;
 
     objectsOnButton.Add(collision);
+    if (collision.tag == "Corpse")
+    {
+      isCorpse = true;
+    }
   }
 
   void OnTriggerExit2D(Collider2D collision)
@@ -23,26 +28,18 @@ public class ActivePlatformButton : MonoBehaviour
       return;
 
     objectsOnButton.Remove(collision);
+
   }
   private void FixedUpdate()
   {
-
     objectsOnButton.RemoveWhere(collider =>
         collider == null ||
         !collider.enabled ||
         !collider.gameObject.activeInHierarchy
     );
 
-    bool shouldBeActivated = objectsOnButton.Count > 0;
-
-    if (shouldBeActivated == activated)
-      return;
-
-    activated = shouldBeActivated;
-
-    if (activated)
+    if (objectsOnButton.Count > 0 || isCorpse)
     {
-      Debug.Log(objectsOnButton.Count);
       platformMoving.StartPlatformMoving();
     }
     else
@@ -54,5 +51,10 @@ public class ActivePlatformButton : MonoBehaviour
   {
     return other.CompareTag("Player") ||
            other.CompareTag("Corpse");
+  }
+
+  void OnDisable()
+  {
+
   }
 }
