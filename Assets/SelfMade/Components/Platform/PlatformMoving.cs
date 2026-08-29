@@ -20,7 +20,7 @@ public class PlatformMoving : MonoBehaviour
   private bool isPlatformMoving = false;
   public event Action OnStartPos;
 
-  private void Start()
+  void Awake()
   {
     startPosition = rb.position;
     previousPosition = rb.position;

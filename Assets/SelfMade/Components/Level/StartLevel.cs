@@ -1,13 +1,19 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class StartLevel : MonoBehaviour
 {
-  public PlatformMoving platformMoving;
+  public List<PlatformMoving> platformsMoving;
 
 
   void Start()
   {
-    if (platformMoving == null) return;
-    platformMoving.StartPlatformMoving();
+    if (platformsMoving == null) return;
+
+    foreach (PlatformMoving platform in platformsMoving)
+    {
+      platform.StartPlatformMoving();
+    }
+
   }
 }

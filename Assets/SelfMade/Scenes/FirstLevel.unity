@@ -13694,7 +13694,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 545c23dd34f8bd54f99aeb78fb928099, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StartLevel
-  platformMoving: {fileID: 2034206917}
+  platformsMoving:
+  - {fileID: 2034206917}
 --- !u!1 &1546611503
 GameObject:
   m_ObjectHideFlags: 0
