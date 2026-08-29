@@ -23,7 +23,7 @@ public class PlayerJump : MonoBehaviour
   }
   private void HandleJump()
   {
-
+    if (playerMovement.IsClimbing) return;
     if (!IsOnGround) return;
     rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
     OnJump?.Invoke();

@@ -1,0 +1,4 @@
+DataPath=C:/D/Unity Projects/SelfMade/Assets
+ScenePath=Assets/SelfMade/Scenes/LastLevel.unity
+Saved=True
+Time=2026-08-28T22:51:07.5334862+02:00

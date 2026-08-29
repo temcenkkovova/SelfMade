@@ -6335,7 +6335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f054cb19d1e3dc74fad3067c14914c29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelComponent
-  nextLevelSceneName: FirstLevel
+  nextLevelSceneName: LastLevel
   finishMessage: YOU EARNED IT. WORTH EVERY DEATH?
   blackScreenImage: {fileID: 1419337301}
   screenFade: {fileID: 1929233895}

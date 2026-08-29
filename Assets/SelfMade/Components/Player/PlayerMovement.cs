@@ -5,6 +5,12 @@ public class PlayerMovement : MonoBehaviour
 {
   private PlayerInputController inputController;
   [SerializeField] private SpriteRenderer spriteRenderer;
+  [SerializeField] private float climbSpeed = 4f;
+
+  public bool IsOnLadder { get; private set; }
+  public bool IsClimbing { get; private set; }
+
+  private float defaultGravity;
   private Rigidbody2D rb;
   public float moveSpeed = 5f;
   public Animator animator;
@@ -17,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
     inputController = GetComponent<PlayerInputController>();
     rb = GetComponent<Rigidbody2D>();
     playerLiveState = GetComponent<PlayerLiveState>();
-
+    defaultGravity = rb.gravityScale;
   }
 
 
@@ -45,28 +51,45 @@ public class PlayerMovement : MonoBehaviour
 
 
   }
-  void FixedUpdate()
+  private void FixedUpdate()
   {
-    float platformVelocityX = 0f;
     if (LevelComponent.Instance.isCompleted) return;
     if (playerLiveState.IsDead) return;
-    float horizontalInput = inputController.MoveInput.x;
+
+    Vector2 input = inputController.MoveInput;
+
+    // Подъём начинается, когда игрок находится на лестнице
+    // и нажимает вверх или вниз.
+    if (IsOnLadder && Mathf.Abs(input.y) > 0.01f)
+    {
+      IsClimbing = true;
+    }
+
+    if (IsClimbing)
+    {
+      rb.gravityScale = 0f;
+
+      rb.linearVelocity = new Vector2(
+          input.x * moveSpeed,
+          input.y * climbSpeed
+      );
+
+      return;
+    }
+
+    rb.gravityScale = defaultGravity;
+
+    float platformVelocityX = 0f;
 
     if (currentPlatform != null)
     {
       platformVelocityX = currentPlatform.Velocity.x;
-
-    }
-    if (playerLiveState.IsDead)
-    {
-      platformVelocityX = 0f;
-
     }
 
-
-    rb.linearVelocity = new Vector2(horizontalInput * moveSpeed + platformVelocityX, rb.linearVelocity.y);
-
-
+    rb.linearVelocity = new Vector2(
+        input.x * moveSpeed + platformVelocityX,
+        rb.linearVelocity.y
+    );
   }
 
   public void SetCurrentPlatform(PlatformMoving platform)
@@ -79,6 +102,24 @@ public class PlayerMovement : MonoBehaviour
     if (currentPlatform == platform)
     {
       currentPlatform = null;
+    }
+  }
+  private void OnTriggerEnter2D(Collider2D other)
+  {
+    if (other.CompareTag("Ladder"))
+    {
+      IsOnLadder = true;
+      Debug.Log("ere");
+    }
+  }
+
+  private void OnTriggerExit2D(Collider2D other)
+  {
+    if (other.CompareTag("Ladder"))
+    {
+      IsOnLadder = false;
+      IsClimbing = false;
+      rb.gravityScale = defaultGravity;
     }
   }
 

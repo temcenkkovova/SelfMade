@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/SelfMade/Scenes/DiplomLevel.unity
     guid: 45c454bd4db3f7d49a2496f5863e782d
+  - enabled: 1
+    path: Assets/SelfMade/Scenes/LastLevel.unity
+    guid: fd941054dd35c66479259a27709af03b
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
