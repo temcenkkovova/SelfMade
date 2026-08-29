@@ -9,7 +9,7 @@ public class PlayerJump : MonoBehaviour
   [SerializeField] private Transform groundCheck;
   [SerializeField] private float groundCheckRadius = 0.15f;
   [SerializeField] private LayerMask groundLayer;
-  [SerializeField] private float jumpForce = 7f;
+  [SerializeField] private float jumpForce;
   private PlayerMovement playerMovement;
   public event Action OnJump;
   private Rigidbody2D rb;
@@ -29,6 +29,11 @@ public class PlayerJump : MonoBehaviour
     OnJump?.Invoke();
     animator.SetTrigger("Jump");
 
+  }
+
+  public void Init(float jumpForce)
+  {
+    this.jumpForce = jumpForce;
   }
   private void Update()
   {

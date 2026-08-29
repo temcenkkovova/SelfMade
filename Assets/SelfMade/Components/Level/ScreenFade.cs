@@ -28,7 +28,7 @@ public class ScreenFade : MonoBehaviour
     fadeTween = canvasGroup.DOFade(0f, fadeDuration).SetEase(Ease.InFlash).SetUpdate(true).OnComplete(() => canvasGroup.blocksRaycasts = false);
 
   }
-  public Tween FadeToBlack()
+  public Tween FadeToBlack(float duration)
   {
     fadeTween?.Kill();
 

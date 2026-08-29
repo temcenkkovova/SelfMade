@@ -1255,6 +1255,7 @@ MonoBehaviour:
   deadPrefab: {fileID: 6453901385706634857, guid: 7d60c5da5167a0a47a77ece8611aeb4b, type: 3}
   respawnPos: {fileID: 1452388692}
   phraseManager: {fileID: 306353188}
+  playerJumpForce: 7
 --- !u!4 &306353187
 Transform:
   m_ObjectHideFlags: 0
@@ -2825,6 +2826,51 @@ Transform:
   - {fileID: 1201115731}
   - {fileID: 6709279}
   m_Father: {fileID: 402924635}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &658685409
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 658685411}
+  - component: {fileID: 658685410}
+  m_Layer: 0
+  m_Name: GameState
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &658685410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658685409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71b01202a5d3b9b4f87d5e679759146f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameStateController
+  initialState: 0
+--- !u!4 &658685411
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658685409}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.50275, y: -0.22296, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &669459128
 PrefabInstance:
@@ -6336,7 +6382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelComponent
   nextLevelSceneName: LastLevel
-  finishMessage: YOU EARNED IT. WORTH EVERY DEATH?
+  finishMessage: 'I can get a job now '
   blackScreenImage: {fileID: 1419337301}
   screenFade: {fileID: 1929233895}
   finishPopupPrefab: {fileID: 5711061849981735318, guid: 8857f70138ff3c644a4ce935e465b465, type: 3}
@@ -6353,6 +6399,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc2c4ecc2e42ca44684f3e41897c0dcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelGoal
+  dialogComponent: {fileID: 0}
+  canvasGroup: {fileID: 0}
+  screenFade: {fileID: 0}
+  messageField: {fileID: 0}
+  secondsPerCharacter: 0.04
+  buttonsEnd: {fileID: 0}
+  levelAudio: {fileID: 0}
 --- !u!114 &1546611507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6370,7 +6423,9 @@ MonoBehaviour:
   pitchMin: 0.75
   pitchMax: 0.96
   volume: 0.76
+  disconnectedClip: {fileID: 0}
   volumeFinishAudio: 0.6
+  backgroundAudioSource: {fileID: 0}
 --- !u!4 &1553062056 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7820298281883824714, guid: a0a073f26d293be4bb60aa84fce53610, type: 3}
@@ -8133,23 +8188,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -5636902612468604649, guid: a14b3a9cf677f58419cf53d6b74fae21, type: 3}
       propertyPath: m_Size.x
-      value: 0.96947956
+      value: 1.4404702
       objectReference: {fileID: 0}
     - target: {fileID: -5636902612468604649, guid: a14b3a9cf677f58419cf53d6b74fae21, type: 3}
       propertyPath: m_Size.y
-      value: 0.15455759
+      value: 0.19447207
       objectReference: {fileID: 0}
     - target: {fileID: -5636902612468604649, guid: a14b3a9cf677f58419cf53d6b74fae21, type: 3}
       propertyPath: m_Offset.x
-      value: -0.01016593
+      value: -0.014157534
       objectReference: {fileID: 0}
     - target: {fileID: -5636902612468604649, guid: a14b3a9cf677f58419cf53d6b74fae21, type: 3}
       propertyPath: m_Offset.y
-      value: 0.019981205
+      value: 0.000023961067
       objectReference: {fileID: 0}
     - target: {fileID: -5636902612468604649, guid: a14b3a9cf677f58419cf53d6b74fae21, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: -5636902612468604649, guid: a14b3a9cf677f58419cf53d6b74fae21, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.y
@@ -8157,7 +8212,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 605943093160434843, guid: a14b3a9cf677f58419cf53d6b74fae21, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.18
+      value: -3.132
       objectReference: {fileID: 0}
     - target: {fileID: 605943093160434843, guid: a14b3a9cf677f58419cf53d6b74fae21, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8201,7 +8256,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5749075850795452521, guid: a14b3a9cf677f58419cf53d6b74fae21, type: 3}
       propertyPath: m_Size.x
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 5749075850795452521, guid: a14b3a9cf677f58419cf53d6b74fae21, type: 3}
       propertyPath: m_Size.y
@@ -8235,7 +8290,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1929233891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8968,3 +9023,4 @@ SceneRoots:
   - {fileID: 2123827991}
   - {fileID: 1352558893}
   - {fileID: 119365549}
+  - {fileID: 658685411}

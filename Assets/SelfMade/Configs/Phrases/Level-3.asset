@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b24d8aca18bfa5e498469209dad926f7, type: 3}
+  m_Name: Level-3
+  m_EditorClassIdentifier: Assembly-CSharp::Phrases
+  levelBoxPhrases:
+  - Get a degree, and your future is guaranteed.
+  - Education opens every door
+  - Your diploma will make you valuable.
+  - There will always be work for qualified people.
+  - "Follow the path, and you\u2019ll find your place."
+  - "Good grades lead to a good life.\u201D"
+  - Your effort will eventually be rewarded
+  - The world needs people like you
+  - Talent always finds an opportunity.
+  - Your dream job is waiting for you.
+  - This is the beginning of your new life.
+  - This is the beginning of your new life.
+  levelDeadPhrases:
+  - Nothing was ever guaranteed.
+  - Only for those already holding the key
+  - They only asked how much you would cost.
+  - Qualified was never the same as wanted.
+  - The path was built to keep you walking
+  - You passed every test except theirs.
+  - Eventually was never a real date.
+  - It just never planned to pay them.
+  - Opportunity was looking for connections.
+  - It was waiting for someone with experience
+  - It was only the end of your old hope
+  - It was only the end of your old hope
+  levelGoalPhrase: YOU EARNED IT. WORTH EVERY DEATH?

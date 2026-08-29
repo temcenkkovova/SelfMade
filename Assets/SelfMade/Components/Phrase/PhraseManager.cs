@@ -37,6 +37,7 @@ public class PhraseManager : MonoBehaviour
 
   public void SpawnPhrase()
   {
+    if (GameStateController.Instance.CurrentState == GameState.GameOver) return;
     if (LevelComponent.Instance.isCompleted) return;
     GameObject player =
           GameObject.FindGameObjectWithTag("Player");
@@ -59,9 +60,10 @@ public class PhraseManager : MonoBehaviour
   public string GetCurrentPhrase()
   {
     string newPhrase;
-    if (currentPhraseIndex > phrasesConfig.levelBoxPhrases.Count)
+    if (currentPhraseIndex >= phrasesConfig.levelBoxPhrases.Count)
     {
-      newPhrase = phrasesConfig.levelBoxPhrases[0];
+      currentPhraseIndex = 0;
+      newPhrase = phrasesConfig.levelBoxPhrases[currentPhraseIndex];
       return newPhrase;
     }
 

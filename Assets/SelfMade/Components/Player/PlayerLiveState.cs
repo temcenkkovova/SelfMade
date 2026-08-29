@@ -27,7 +27,7 @@ public class PlayerLiveState : MonoBehaviour
   }
   public void HandleBladeCollision()
   {
-
+    if (GameStateController.Instance.CurrentState == GameState.GameOver) return;
     if (LevelComponent.Instance.isCompleted) return;
     if (IsDead) return;
     IsDead = true;
@@ -42,7 +42,7 @@ public class PlayerLiveState : MonoBehaviour
   public void PlayerDead()
   {
     if (IsDead) return;
-
+    if (GameStateController.Instance.CurrentState == GameState.GameOver) return;
     IsDead = true;
     animator.SetTrigger("Dead");
     StartCoroutine(RespawnCoroutine());
@@ -50,6 +50,7 @@ public class PlayerLiveState : MonoBehaviour
 
   public IEnumerator RespawnCoroutine()
   {
+
     yield return new WaitForSeconds(1f);
 
     Quaternion currentDeadRot = transform.rotation;

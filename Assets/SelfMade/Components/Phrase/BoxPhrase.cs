@@ -42,8 +42,16 @@ public class BoxPhrase : MonoBehaviour
 
     flyingObject.OnFinishPosition += HandleDestroy;
     phraseCollision.OnReachedTarget += HandleDestroy;
-  }
 
+    GameStateController.Instance.OnGameStateChanged += HandleGameOver;
+  }
+  public void HandleGameOver(GameState gameState)
+  {
+    if (gameState == GameState.GameOver)
+    {
+      enabled = false;
+    }
+  }
   public void Init(string message, string deadMessage, Vector3 targetPosition)
   {
     textField.text = message;
@@ -66,6 +74,7 @@ public class BoxPhrase : MonoBehaviour
 
   private void PlayAttackSequence()
   {
+    if (GameStateController.Instance.CurrentState == GameState.GameOver) return;
 
     Color textColor = textField.color;
     Color backgroundColor = backgroundRenderer.color;
@@ -125,6 +134,7 @@ public class BoxPhrase : MonoBehaviour
 
   private void OnDestroy()
   {
+    GameStateController.Instance.OnGameStateChanged -= HandleGameOver;
     animationSequence?.Kill();
 
     if (phraseCollision != null)

@@ -10,11 +10,28 @@ public class PhraseCollision : MonoBehaviour
   public DeadPopup deadPopupPrefab;
 
   private string deadMessage;
+
+  void Awake()
+  {
+    GameStateController.Instance.OnGameStateChanged += HandleGameOver;
+  }
+
+  public void HandleGameOver(GameState gameState)
+  {
+    if (gameState == GameState.GameOver)
+    {
+      enabled = false;
+    }
+  }
   void Update()
   {
     if (LevelComponent.Instance.isCompleted) enabled = false;
   }
 
+  void OnDisable()
+  {
+    GameStateController.Instance.OnGameStateChanged -= HandleGameOver;
+  }
   public void InitConfig(string deadMessage)
   {
     this.deadMessage = deadMessage;
@@ -24,6 +41,7 @@ public class PhraseCollision : MonoBehaviour
 
     if (collision.tag == "Player")
     {
+
       if (!canDamage) return;
       PlayerLiveState playerLiveState = collision.GetComponent<PlayerLiveState>();
       PlayerAudio playerAudio = collision.GetComponent<PlayerAudio>();

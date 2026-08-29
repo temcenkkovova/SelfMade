@@ -32,7 +32,7 @@ public class FlyingObject : MonoBehaviour
 
   public void Prepare()
   {
-
+    if (GameStateController.Instance.CurrentState == GameState.GameOver) return;
     finished = false;
     damageCollider.enabled = false;
     spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, 0f);
@@ -41,6 +41,7 @@ public class FlyingObject : MonoBehaviour
 
   public void Launch(Vector3 targetPosition)
   {
+    if (GameStateController.Instance.CurrentState == GameState.GameOver) return;
     damageCollider.enabled = true;
     //OnStartFly?.Invoke();
     Sequence launchSequence = DOTween.Sequence().SetLink(gameObject);
@@ -52,6 +53,7 @@ public class FlyingObject : MonoBehaviour
 
   private void StartMovement(Vector3 targetPosition)
   {
+    if (GameStateController.Instance.CurrentState == GameState.GameOver) return;
     float duration = Vector3.Distance(transform.position, targetPosition) / Mathf.Max(moveSpeed, 0.01f);
 
     movementTween = transform

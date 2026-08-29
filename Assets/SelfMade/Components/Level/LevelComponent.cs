@@ -37,7 +37,7 @@ public class LevelComponent : MonoBehaviour
     DeadPopup popup = Instantiate(finishPopupPrefab, goalTr.position, Camera.main.transform.rotation);
     popup.Show(finishMessage, 5f);
 
-    screenFade.FadeToBlack().OnComplete(LoadNextLevel);
+    screenFade.FadeToBlack(1f).OnComplete(LoadNextLevel);
     // Time.timeScale = 0;
   }
 

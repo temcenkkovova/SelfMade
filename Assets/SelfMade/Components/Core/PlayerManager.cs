@@ -6,6 +6,7 @@ public class PlayerManager : MonoBehaviour
   public GameObject deadPrefab;
   public Transform respawnPos;
   public PhraseManager phraseManager;
+  public float playerJumpForce;
 
 
   void Start()
@@ -18,6 +19,7 @@ public class PlayerManager : MonoBehaviour
     PlayerBootstrap player = Instantiate(playerPrefab, respawnPos.position, respawnPos.rotation);
 
     player.GetComponent<PlayerLiveState>().Init(this);
+    player.GetComponent<PlayerJump>().Init(playerJumpForce);
 
 
   }
