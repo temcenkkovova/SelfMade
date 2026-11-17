@@ -1,6 +1,7 @@
 # SelfMade
 
 **A solo-developed 2D puzzle platformer built with Unity, where death becomes part of the solution.**
+**Game is published on itch.io   https://temchenko.itch.io/selfmade
 
 Navigate platforms, climb ladders and dodge attacks announced by text warnings. When you die, your body stays behind and can activate platform switches while you respawn for another attempt.
 
